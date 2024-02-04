@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+body {
+    background-color: #E8B4BC;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: xx-large;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 2rem;
+}
+
+#fname {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #F5E3E0;
+    height: 4rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60vw;
+    align-items: center;
+    margin: auto;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.img {
+    width: 10vw;
+}
+
+i {
+    font-size: 3rem;
+}
+
+select {
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #F5E3E0;
+    height: 4rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.msg {
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    padding: 3rem 0 3rem;
+}
+
+.btn {
+    background-color: #F5E3E0;
+    border: 2px solid rgb(53, 52, 52);
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 10rem;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+.btn:hover {
+    border: 5px solid rgb(53, 52, 52);
+    background-color: #6E4555;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.socialmediahandle {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.logo {
+    color: #3A3238;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.name {
+    font-size: x-large;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 700px) {
+    .header {
+        font-size: 1.4rem;
+    }
+
+    #fname {
+        font-size: large;
+        height: 3rem;
+    }
+
+    .main {
+        max-width: 80vw;
+    }
+
+    select {
+        height: 3rem;
+        font-size: large;
+    }
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .header {
+        font-size: 1rem;
+    }
+
+    #fname {
+        font-size: medium;
+        height: 2rem;
+    }
+
+    .main {
+        max-width: 90vw;
+    }
+
+    select {
+        height: 2rem;
+        font-size: medium;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: medium;
+    }
+
+    .footer {
+        height: 1rem;
+        gap: 0.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 750px) {
+    .header {
+        font-size: 1rem;
+    }
+
+    #fname {
+        font-size: medium;
+        height: 2rem;
+    }
+
+    .main {
+        max-width: 90vw;
+    }
+
+    select {
+        height: 2rem;
+        font-size: medium;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: medium;
+    }
+
+    .footer {
+        height: 1rem;
+        gap: 0.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 650px) {
+    .header {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    .input {
+        margin: 0;
+    }
+
+    #fname {
+        font-size: medium;
+        height: 2rem;
+    }
+
+    .main {
+        max-width: 90vw;
+    }
+
+    select {
+        height: 2rem;
+        font-size: medium;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: medium;
+    }
+
+    .footer {
+        height: 1rem;
+        gap: 0.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-height: 425px) {
+    .header {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    .input {
+        margin: 0;
+    }
+
+    .img {
+        width: 8vw;
+    }
+
+    .country {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    #fname {
+        font-size: medium;
+        height: 2rem;
+    }
+
+    .main {
+        max-width: 90vw;
+    }
+
+    select {
+        height: 2rem;
+        font-size: medium;
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: small;
+        padding: 0;
+    }
+
+    .msg {
+        font-size: medium;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .footer {
+        height: 1rem;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
