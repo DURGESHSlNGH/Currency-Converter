@@ -160,7 +160,7 @@ const countryList = {
     ZWD: "ZW",
 };
 
-const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
 const dropDowns = document.querySelectorAll(".main select");
 const fromVal = document.querySelector(".from select");
@@ -177,7 +177,7 @@ for (let dropDown of dropDowns) {
     }
     dropDown.addEventListener("click", (event) => {              //ye event syntax mei hi h toh ye lagana hi h
         updateFlag(event.target)                                 //.target -> har ek values ko target karega
-     });
+    });
 }
 
 const updateFlag = (element) => {
@@ -193,18 +193,18 @@ const conversion = async () => {
     let amount = document.querySelector(".input input");         //andar isiley kiya kyunki jab bhi function call hoga
     let amtVal = amount.value;                                   //tab tab ye values change hogi
     if (amtVal === "" || amtVal < 1) {
-      amtVal = 1;
-      amount.value = "1";
+        amtVal = 1;
+        amount.value = "1";
     }
-    const newURL = `${BASE_URL}/${fromVal.value.toLowerCase()}/${toVal.value.toLowerCase()}.json`;
+    const newURL = `${BASE_URL}/${fromVal.value.toLowerCase()}.json`;
     let response = await fetch(newURL);
     let data = await response.json();
-    let exchangeRates = data[toVal.value.toLowerCase()];
-    let finalAmount = amtVal * exchangeRates;
-    message.innerText = `${amtVal} ${fromVal.value} = ${finalAmount} ${toVal.value}`;
+    let exchangeRates = data[fromVal.value.toLowerCase()][toVal.value.toLowerCase()];  //github pe jaake wo link 
+    let finalAmount = amtVal * exchangeRates;                                          //chalaake dekh samjh aa 
+    message.innerText = `${amtVal} ${fromVal.value} = ${finalAmount} ${toVal.value}`;  //jaayega ye [][] kyu lagaya
 }
 
 button.addEventListener("click", (event) => {
     event.preventDefault();                                //preventDefault() -> jo bhi cheeze khud se hoti h usse 
     conversion();                                          //                    prevent karta h
-  });
+});
